@@ -31,7 +31,7 @@ public class Main extends TimerTask{
             properties.put("mail.imap.ssl.enable", "true");
             Session emailSession = Session.getDefaultInstance(properties,null);
             Store store = emailSession.getStore("imaps");
-            store.connect("imap.gmail.com", "myEmail@example.com", "myPassword");
+            store.connect("imap.gmail.com", "", "myPassword");
             Folder emailFolder = store.getFolder("INBOX");
             emailFolder.open(Folder.READ_ONLY);
 
